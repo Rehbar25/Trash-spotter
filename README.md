@@ -105,7 +105,8 @@ Measured on model B with batch 1, end-to-end (resize + model + postprocess) on a
 Tested on Ubuntu 22.04, Python 3.10, RTX 3050 Laptop (4 GB), 16 GB RAM.
 
 ```bash
-git clone https://github.com/Rehbar25/trashspotter.git && cd trashspotter
+git clone https://github.com/Rehbar25/Trash-spotter.git && cd Trash-spotter
+
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
