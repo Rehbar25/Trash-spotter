@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Big files: data, models, outputs (they don't belong in git)
+data/
+models/
+runs/
+*.pt
+*.engine
+*.onnx
+
+# Editor / OS
+.vscode/
+.ipynb_checkpoints/
+.DS_Store

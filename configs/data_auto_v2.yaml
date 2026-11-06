@@ -1,0 +1,6 @@
+# Auto-labels only: TACO-style pool + TACO train images + PlastOPol train images where the teacher found litter.
+# PlastOPol is listed twice = 2x oversampling, so the new kind of scenes isn't drowned out by the 4,831 TACO-style images.
+path: /home/rehbar/cv/data/auto_yolo
+train: [pool.txt, taco_train.txt, plastopol.txt, plastopol.txt]
+val: /home/rehbar/cv/data/taco_yolo/test.txt
+names: {0: bottle, 1: can, 2: plastic_bag, 3: wrapper, 4: cup, 5: paper}

@@ -1,0 +1,44 @@
+# Litter classes. The list order defines the YOLO class id (0, 1, 2, ...).
+# taco: TACO categories that count as this class when evaluating.
+classes:
+    - name: bottle
+      prompts: [plastic bottle]
+      clip: [a plastic bottle, a glass bottle, a water bottle]
+      taco: [Clear plastic bottle, Other plastic bottle, Glass bottle]
+    - name: can
+      prompts: [soda can]
+      clip: [a drink can, an aluminium soda can, a tin can]
+      taco: [Drink can, Food Can]
+    - name: plastic_bag
+      prompts: [plastic bag]
+      clip: [a plastic bag, a piece of plastic film, a garbage bag]
+      taco: [Single-use carrier bag, Garbage bag, Polypropylene bag, Plastic film]
+    - name: wrapper
+      prompts: [wrapper]
+      clip: [a snack wrapper, a crisp packet, a candy wrapper]
+      taco: [Other plastic wrapper, Crisp packet]
+    - name: cup
+      prompts: [cup]
+      clip: [a disposable cup, a paper cup, a plastic cup]
+      taco: [Disposable plastic cup, Paper cup, Foam cup, Glass cup, Other plastic cup]
+    - name: paper
+      prompts: [paper]
+      clip: [a piece of paper, a tissue, a crumpled sheet of paper]
+      taco: [Normal paper, Magazine paper, Wrapping paper, Tissues]
+
+
+# Extra phrases that give the model somewhere to put non-target objects.
+# Detections matching these are discarded, never used as labels.
+catch_prompts: [food container, lid, leaf, stone]
+
+# Grounding DINO settings
+box_threshold: 0.35
+nms_iou: 0.7
+
+
+# CLIP settings. If CLIP thinks a box is one of clip_other, the box is dropped.
+clip_model: openai/clip-vit-large-patch14
+clip_pad: 0.15
+clip_other: [a cardboard box, a bottle cap, a cigarette butt, a leaf, a rock,
+             grass, sand, the ground, a food container, a straw]
+

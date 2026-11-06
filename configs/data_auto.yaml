@@ -1,0 +1,5 @@
+# YOLO trained on auto-labels only (no human labels used for training)
+path: /home/rehbar/cv/data/auto_yolo
+train: [pool.txt, taco_train.txt]
+val: /home/rehbar/cv/data/taco_yolo/test.txt   # human labels: the honest test
+names: {0: bottle, 1: can, 2: plastic_bag, 3: wrapper, 4: cup, 5: paper}

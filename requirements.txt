@@ -1,0 +1,23 @@
+# PyTorch with CUDA: install first, matching your CUDA version (https://pytorch.org)
+torch==2.12.1
+torchvision==0.27.1
+
+ultralytics==8.4.199
+transformers==5.20.2
+pillow>=12.0
+numpy>=2.0
+opencv-python>=4.8
+pyyaml
+tqdm
+scipy>=1.10
+
+# demo app (Gradio + tracking + browser-playable video)
+gradio==6.31.0
+jinja2>=3.1.2
+lap==0.5.14
+imageio[ffmpeg]
+
+# TensorRT export (optional, NVIDIA GPU only). v10.x: v11 removed the INT8 calibrator used here
+tensorrt-cu13==10.16.1.11
+onnx>=1.12
+onnxslim>=0.1.71
